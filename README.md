@@ -4,6 +4,23 @@
 
 This repository contains an opinionated example of a simple Node/TypeScript web service. It's aimed to give non-Node/TS developers an idea of what a simple web application can look like and might serve as a starter for other projects.
 
+This application needs a running mongodb instance to work. If no `DB_CONN_URL` environment variable containing a mongodb connection url is passed, the application falls back to `mongodb://127.0.0.1:27017`.
+If you don't have a running mongodb instance at hand, you can start one running `docker run --name some-mongo -p 127.0.0.1:27017:27017 -d mongo`, assuming you have docker installed.
+
+Before usage, run `npm install`.
+
+You can use this service by running:
+
+* `npm run build` to build the application
+* `npm run start` to (build and) start the application
+* `npm run serve` to start the application in watch mode
+* `npm run test` to run the sample tests
+
+## This is the ADVANCED BRANCH
+
+I included an advanced branch to discuss some higher-level TypeScript features and some higher-level architecture approaches. 
+You can find more on what's different in the `advanced` branch at the end of this README. To have a look at the simpler starter version, please check out the `master` branch.
+
 ## Some opinionated stuff
 
 This application uses some extra packages that can be handy for slightly larger services:
@@ -11,6 +28,7 @@ This application uses some extra packages that can be handy for slightly larger 
 * [expressjs](https://github.com/expressjs/express) might be the most popular Node.js web framework out there
 * The [routing controllers](https://github.com/typestack/routing-controllers) packages allows to simply declare controllers via decorators, much like in Java Spring with annotations.
 * The [typedi](https://github.com/typestack/typedi) package allows to declare and inject services for DI/IOC.
+* I do use mongodb (just because it's easy for an example). I do not use an ORM like mongoose, mainly because ORMs are magic, performance eating monsters that aren't needed if you work with a document database (opinionated).
 
 Please be aware that these are just examples. There are other good packages out there for all of these purposes.
 
@@ -28,5 +46,9 @@ This is obviously just a sample project. There are some things that are missing 
 * The `DbFactory` class does not have a reconnect mechanism in case the first database connection fails.
 * There are currently **no validations** for incoming http payloads in place. Please add some before you put anything in production ([joi](https://github.com/hapijs/joi) is a popular choice for more complex validations).
 * I included some tests, mainly to show how tests can be done easily. You should probably have better test coverage.
+* Please **update** these projects dependencies before you use it.
 
-If you there is anything you don't understand, bugs or requests, please don't hesitate to write me a mail. 
+If you there is anything you don't understand, bugs or requests, please don't hesitate to write me a mail.
+
+## More advanced stuff
+
