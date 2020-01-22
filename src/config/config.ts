@@ -1,5 +1,5 @@
 export const DB_CONN_URL = dbConnUrl();
-export const DB_NAME = process.env.NODE_ENV === 'test' ? 'happenings_test' : 'happenings';
+export const DB_NAME = process.env.NODE_ENV === 'test' ? 'ts-base-service_test' : 'ts-base-service';
 export const SERVER_PORT = 8000;
 
 function dbConnUrl() {
