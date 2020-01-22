@@ -3,8 +3,9 @@ import { DbFactory } from './db-factory';
 import { Beer } from '../domain/beer';
 import { Service } from 'typedi';
 import { BeerUpdate } from '../domain/beer-update';
+import {BEER_REPO} from '../config/services';
 
-@Service()
+@Service(BEER_REPO)
 export class BeerRepository {
 
     private readonly collection: Collection;
