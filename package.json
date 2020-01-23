@@ -1,7 +1,7 @@
 {
-  "name": "ts-base-service",
+  "name": "typescript-base-app",
   "version": "1.0.0",
-  "description": "An example of a simple Node/TypeScript webservice setup",
+  "description": "An example of a simple Node/TypeScript webapp setup",
   "main": "main.js",
   "scripts": {
     "start": "npm run build && node ./build/main.js",
