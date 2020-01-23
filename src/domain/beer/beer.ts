@@ -1,7 +1,5 @@
-import { ObjectID } from 'mongodb';
-
 export interface Beer {
-    _id?: ObjectID;
+    id: string;
     name: string;
     brewery: string;
     type: 'lager' | 'ale' | 'wheat'; // there are more, of course ;-)

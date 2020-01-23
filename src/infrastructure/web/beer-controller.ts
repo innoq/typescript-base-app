@@ -1,9 +1,9 @@
-import { JsonController, Post, Body, Patch, Param, OnUndefined, Get, QueryParam } from 'routing-controllers';
-import { NewBeer } from '../domain/new-beer';
-import { BeerService } from '../service/beer-service';
+import { Body, Get, JsonController, OnUndefined, Param, Patch, Post, QueryParam } from 'routing-controllers';
 import { Inject } from 'typedi';
-import { BeerUpdate } from '../domain/beer-update';
-import { BEER_SERVICE } from '../config/services';
+import { BeerService } from '../../boundary/service/beer-service';
+import { BEER_SERVICE } from '../../config/services';
+import { BeerUpdate } from '../../domain/beer/beer-update';
+import { NewBeer } from '../../domain/beer/new-beer';
 
 @JsonController('/beers')
 export class BeerController {

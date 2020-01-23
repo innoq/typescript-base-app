@@ -1,9 +1,9 @@
+import axios from 'axios';
+import { expect } from 'chai';
 import { Server } from 'http';
 import { App } from '../src/app';
-import { DbFactory } from '../src/persistence/db-factory';
-import axios from 'axios';
 import { SERVER_PORT } from '../src/config/config';
-import { expect } from 'chai';
+import { DbFactory } from '../src/infrastructure/persistence/db-factory';
 
 const api = axios.create({
     baseURL: 'http://127.0.0.1:' + SERVER_PORT,

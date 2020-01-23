@@ -1,5 +1,5 @@
 import { Db, MongoClient, MongoClientOptions } from 'mongodb';
-import { DB_CONN_URL, DB_NAME } from '../config/config';
+import { DB_CONN_URL, DB_NAME } from '../../config/config';
 
 const mongoClientOptions: MongoClientOptions = {
     useNewUrlParser: true,

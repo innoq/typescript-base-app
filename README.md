@@ -51,4 +51,3 @@ This is obviously just a sample project. There are some things that are missing 
 If you there is anything you don't understand, bugs or requests, please don't hesitate to write me a mail.
 
 ## More advanced stuff
-
