@@ -4,6 +4,8 @@
 
 This repository contains an opinionated example of a simple Node/TypeScript web service. It's aimed to give non-Node/TS developers an idea of what a simple web application can look like and might serve as a starter for other projects.
 
+Note that there is also an [advanced branch](https://github.com/innoq/typescript-base-app/tree/advanced) of this project that aims to be an example of an Onion Architecture approach and uses some of TypeScript's more advanced utility types to solve common dependency problems.
+
 This application needs a running mongodb instance to work. If no `DB_CONN_URL` environment variable containing a mongodb connection url is passed, the application falls back to `mongodb://127.0.0.1:27017`.
 If you don't have a running mongodb instance at hand, you can start one running `docker run --name some-mongo -p 127.0.0.1:27017:27017 -d mongo`, assuming you have docker installed.
 
