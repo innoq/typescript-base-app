@@ -7,7 +7,7 @@
     "start": "npm run build && node ./build/main.js",
     "serve": "nodemon -x ts-node src/main.ts",
     "build": "./node_modules/.bin/tsc",
-    "test": "NODE_ENV=test mocha --timeout=3000 --exit --require ts-node/register ./test/*.test.ts"
+    "test": "env NODE_ENV=test mocha --timeout=3000 --exit --require ts-node/register ./test/*.test.ts"
   },
   "author": "Christoph Burnicki <christoph.burnicki@innoq.com>",
   "license": "ISC",
