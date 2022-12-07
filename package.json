@@ -12,10 +12,10 @@
   "author": "Christoph Burnicki <christoph.burnicki@innoq.com>",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.11.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongodb": "^3.5.2",
     "multer": "^1.4.2",
     "reflect-metadata": "^0.1.13",
